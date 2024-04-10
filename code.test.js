@@ -51,10 +51,18 @@ let graph6 = [
   [3]
 ];
 
+let graph1 = [
+  [],
+  [],
+  []
+];
+
 assert(hasCycle(graph) == true);
 assert(hasCycle(graph2) == true);
 assert(hasCycle(graph3) == true);
 assert(hasCycle(graph4) == false);
 assert(hasCycle(graph5) == false);
 assert(hasCycle(graph6) == false);
+assert(hasCycle(graph1) == false);
+assert(hasCycle([]) == false);
 assert(hasCycle([[]]) == false);
