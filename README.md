@@ -16,3 +16,25 @@ the function and run automatically when you commit through a GitHub action.
 
 What is the worst-case big $\Theta$ complexity of your implementation? Add your
 answer, including your reasoning, to this markdown file.
+
+Side Note:
+
+For this implementation, I have it so that the algorithm works on specifically an 
+undirected graph, as Kruskal's Algorithm is meant for undirected graphs. If I
+need to change it so that this algorithm works on directed graphs only, then I can
+do that!
+
+My Answer:
+
+The worst-case situation for this implementation would occur if the algorithm
+does not find a cycle and has to check every vertex, in case there is a cycle
+but the starting node given doesn't connect to any node in the cycle. The for 
+loop in the hasCycle function is in charge of iterating through every vertex
+as it runs for the graph length, so we have |V| or number of vertices. Then 
+the checkCycle function has a for loop that is iterating over the number of 
+edges because it is searching all of the edges leading to neighboring nodes
+until an edge leads to a node that results in a cycle or until everything
+has been traversed and no cycle has been found. This for loop would run for |E|.
+Now the checkCycle function is called inside the first for loop, and since the
+body of the second function is a for loop, they are essentially nested. That gives
+us |V|*|E|, so our worst-case $\Theta$ complexity is $\Theta(|V| * |E|).
