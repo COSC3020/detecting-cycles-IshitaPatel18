@@ -37,4 +37,4 @@ until an edge leads to a node that results in a cycle or until everything
 has been traversed and no cycle has been found. This for loop would run for |E|.
 Now the checkCycle function is called inside the first for loop, and since the
 body of the second function is a for loop, they are essentially nested. That gives
-us |V|*|E|, so our worst-case $\Theta$ complexity is $\Theta(|V| * |E|).
+us |V|*|E|, so our worst-case $\Theta$ complexity is $\Theta(|V| * |E|)$.
