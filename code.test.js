@@ -51,10 +51,10 @@ let graph6 = [
   [3]
 ];
 
-assert(JSON.stringify(hasCycle(graph)) == true);
-assert(JSON.stringify(hasCycle(graph2)) == true);
-assert(JSON.stringify(hasCycle(graph3)) == true);
-assert(JSON.stringify(hasCycle(graph4)) == false);
-assert(JSON.stringify(hasCycle(graph5)) == false);
-assert(JSON.stringify(hasCycle(graph6)) == false);
-assert(JSON.stringify(hasCycle([[]])) == false);
+assert(hasCycle(graph) == true);
+assert(hasCycle(graph2) == true);
+assert(hasCycle(graph3) == true);
+assert(hasCycle(graph4) == false);
+assert(hasCycle(graph5) == false);
+assert(hasCycle(graph6) == false);
+assert(hasCycle([[]]) == false);
