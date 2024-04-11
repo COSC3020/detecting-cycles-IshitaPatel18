@@ -34,7 +34,12 @@ as it runs for the graph length, so we have |V| or number of vertices. Then
 the checkCycle function has a for loop that is iterating over the number of 
 edges because it is searching all of the edges leading to neighboring nodes
 until an edge leads to a node that results in a cycle or until everything
-has been traversed and no cycle has been found. This for loop would run for |E|.
-Now the checkCycle function is called inside the first for loop, and since the
+has been traversed and no cycle has been found. This is done recursively, so that
+each edge connecting to neighboring nodes is iterated over, so this would run for |E|.
+There is also a visitedNodes.push(startNode) before the for loop that is keeping track
+of all the nodes that have been visited as a way to check if another node cycles back to
+a past node, which runs for |V| as it will have pushed all the vertices in the worst case.
+The checkCycle for loop and the visitedNodes are consecutive, so they can be added together
+to get |V| + |E|. Now the checkCycle function is called inside the first for loop, and since the
 body of the second function is a for loop, they are essentially nested. That gives
-us |V|*|E|, so our worst-case $\Theta$ complexity is $\Theta(|V| * |E|)$.
+us |V|(|V| + |E|), so our worst case $\Theta$ complexity would be $\Theta(|V|(|V| + |E|))$.
